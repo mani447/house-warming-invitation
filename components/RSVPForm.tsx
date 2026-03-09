@@ -136,7 +136,7 @@ export default function RSVPForm() {
           {/* Contact */}
           <div>
             <label className="block text-sm font-medium text-warm-brown mb-1.5">
-              Phone or Email <span className="text-red-400">*</span>
+              Phone or Email
             </label>
             <input
               type="text"

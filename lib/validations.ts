@@ -20,9 +20,7 @@ export function validateRSVP(data: RSVPFormData): ValidationErrors {
     errors.name = "Name must be at least 2 characters.";
   }
 
-  if (!data.contact || data.contact.trim().length === 0) {
-    errors.contact = "Please enter your phone number or email.";
-  } else {
+  if (data.contact && data.contact.trim().length > 0) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^[\d\s\-+().]{7,20}$/;
     if (
