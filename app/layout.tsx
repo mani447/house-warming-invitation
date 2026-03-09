@@ -13,21 +13,12 @@ export const metadata: Metadata = {
     description:
       "Join us to celebrate our new home! April 12, 2026 at 09:30 AM.",
     type: "website",
-    images: [
-      {
-        url: "/api/og",
-        width: 1200,
-        height: 630,
-        alt: "Housewarming Ceremony Invitation",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Housewarming Ceremony | Manideep & Meghana",
     description:
       "Join us to celebrate our new home! April 12, 2026 at 09:30 AM.",
-    images: ["/api/og"],
   },
 };
 
