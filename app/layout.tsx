@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/invitation-bg.png",
-        width: 800,
-        height: 1200,
+        url: "/api/og",
+        width: 1200,
+        height: 630,
         alt: "Housewarming Ceremony Invitation",
       },
     ],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Housewarming Ceremony | Manideep & Meghana",
     description:
       "Join us to celebrate our new home! April 12, 2026 at 09:30 AM.",
-    images: ["/invitation-bg.png"],
+    images: ["/api/og"],
   },
 };
 
