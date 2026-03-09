@@ -189,9 +189,13 @@ export default function RSVPForm() {
                 min={1}
                 max={20}
                 value={form.guest_count}
-                onChange={(e) =>
-                  handleChange("guest_count", parseInt(e.target.value) || 1)
-                }
+                onChange={(e) => {
+                  const val = e.target.value;
+                  handleChange("guest_count", val === "" ? 0 : parseInt(val) || 0);
+                }}
+                onBlur={() => {
+                  if (form.guest_count < 1) handleChange("guest_count", 1);
+                }}
                 className="w-full px-4 py-3 rounded-xl border border-gold/30 bg-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all text-warm-text"
               />
               {errors.guest_count && (
