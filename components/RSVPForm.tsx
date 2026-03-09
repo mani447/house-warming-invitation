@@ -102,8 +102,11 @@ export default function RSVPForm() {
         <h3 className="text-sm uppercase tracking-[0.3em] text-gold mb-2">
           RSVP
         </h3>
-        <p className="text-2xl font-display text-warm-brown mb-8">
+        <p className="text-2xl font-display text-warm-brown mb-3">
           Will You Join Us?
+        </p>
+        <p className="text-warm-text/60 text-sm mb-8">
+          Kindly RSVP by <span className="font-semibold text-warm-brown">April 5, 2026</span>
         </p>
 
         <form
