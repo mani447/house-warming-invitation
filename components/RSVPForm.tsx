@@ -12,6 +12,7 @@ export default function RSVPForm() {
     attending: true,
     guest_count: 1,
   });
+  const [guestCountInput, setGuestCountInput] = useState("1");
   const [errors, setErrors] = useState<ValidationErrors>({});
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [serverError, setServerError] = useState("");
@@ -22,10 +23,12 @@ export default function RSVPForm() {
     // If not attending, force guest_count to 0
     if (field === "attending" && value === false) {
       updated.guest_count = 0;
+      setGuestCountInput("0");
     }
     // If switching to attending, default to 1
     if (field === "attending" && value === true && form.guest_count === 0) {
       updated.guest_count = 1;
+      setGuestCountInput("1");
     }
 
     setForm(updated);
@@ -188,13 +191,16 @@ export default function RSVPForm() {
                 type="number"
                 min={1}
                 max={20}
-                value={form.guest_count}
+                value={guestCountInput}
                 onChange={(e) => {
-                  const val = e.target.value;
-                  handleChange("guest_count", val === "" ? 0 : parseInt(val) || 0);
+                  const val = e.target.value.replace(/[^0-9]/g, "");
+                  setGuestCountInput(val);
+                  handleChange("guest_count", val === "" ? 1 : Math.min(parseInt(val), 20));
                 }}
                 onBlur={() => {
-                  if (form.guest_count < 1) handleChange("guest_count", 1);
+                  const num = Math.max(1, Math.min(parseInt(guestCountInput) || 1, 20));
+                  setGuestCountInput(String(num));
+                  handleChange("guest_count", num);
                 }}
                 className="w-full px-4 py-3 rounded-xl border border-gold/30 bg-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all text-warm-text"
               />
