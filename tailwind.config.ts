@@ -9,8 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        cream: "#FDF8F0",
+        "cream-dark": "#F5EDE0",
+        gold: "#C8A951",
+        "gold-dark": "#A8893A",
+        "warm-brown": "#5C3D2E",
+        "warm-text": "#3E2723",
+      },
+      fontFamily: {
+        serif: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+        display: ["Georgia", "serif"],
       },
     },
   },
