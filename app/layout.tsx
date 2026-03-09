@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Housewarming Ceremony | Manideep & Meghana",
     description:
-      "Join us to celebrate our new home! April 12, 2026 at 09:30 AM.",
+      "Our new home is ready and we'd love to celebrate with you! Please join us for our Housewarming Ceremony on April 12, 2026 at 09:30 AM. Kindly RSVP!",
     type: "website",
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Housewarming Ceremony | Manideep & Meghana",
     description:
-      "Join us to celebrate our new home! April 12, 2026 at 09:30 AM.",
+      "Our new home is ready and we'd love to celebrate with you! Please join us for our Housewarming Ceremony on April 12, 2026 at 09:30 AM. Kindly RSVP!",
     images: ["/og-image.jpg"],
   },
 };
